@@ -1,0 +1,37 @@
+{
+  "name": "ai-career-roadmap-server",
+  "version": "1.0.0",
+  "description": "Backend service for AI-Powered Skill Gap Analysis and Personalized Career Roadmap System",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node seed/seeder.js",
+    "test:auth": "node test/authProfileTest.js",
+    "test:resume": "node test/resumeExtractionTest.js",
+    "test:ai": "node test/aiExtractionTest.js",
+    "test:skillgap": "node test/skillGapAnalysisTest.js",
+    "test:roadmap": "node test/roadmapGeneratorTest.js",
+    "test:frontend": "node test/frontendAuthIntegrationTest.js",
+    "test:dashboard": "node test/frontendDashboardIntegrationTest.js",
+    "test:e2e": "node test/finalE2EIntegrationTest.js",
+    "test": "node test/authProfileTest.js && node test/resumeExtractionTest.js && node test/skillGapAnalysisTest.js && node test/roadmapGeneratorTest.js && node test/frontendAuthIntegrationTest.js && node test/frontendDashboardIntegrationTest.js && node test/finalE2EIntegrationTest.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.12.3",
+    "mongoose": "^8.4.0",
+    "multer": "^2.4.0",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
